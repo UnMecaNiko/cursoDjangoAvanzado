@@ -7,6 +7,8 @@ Sitios increíbles como Platzi, Instagram, Pinterest o el portal del New York Ti
 - Aplicar y resolver problemas reales de la industria
 - Implementar procesos de testing
 
+Lo que verás a continuación son mis apuntes sobre el [curso](https://platzi.com/cursos/django-avanzado/) 🚀 Si ves algún error o punto de mejora no dudes en hacer tu aporte 💚
+
 ## Cimientos
 
 ### Arquitectura de una aplicación
@@ -45,6 +47,21 @@ Principios:
 **Dev/prod parity**: Reducir la diferencia entre entornos para reducir tiempo entre deploys y las personas involucradas sean las mismas que puedan hacer el deploy
 
 **Admin processes**: Tratar los procesos administrativos como una cosa diferente, no deben estar con la app.
+
+### Codebase
+
+Todo corriendo en **docker**
+
+**Django** 
+
+**PostgreSQL**
+
+**Redis**
+
+**Celery** Está compuesto de tres servicios: broker beat y flower, una interfaz gráfica a saber lo que pasa en celery
+
+
+
 
 
 
