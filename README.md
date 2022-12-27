@@ -61,11 +61,25 @@ Todo corriendo en **docker**
 **Celery** Está compuesto de tres servicios: broker beat y flower, una interfaz gráfica a saber lo que pasa en celery
 
 
+Una vez agregado el código fuente ejecutamos:
+`
+docker-compose -f local.yml build
 
 
+`
+```bash
+docker-compose -f local.yml build
+
+docker images
+
+docker-compose -f local.yml up
+```
 
 
+# Helpful tips
 
+
+python3 -m venv 
 
 # Helpful Links
 
