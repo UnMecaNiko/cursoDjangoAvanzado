@@ -9,6 +9,8 @@ Sitios increíbles como Platzi, Instagram, Pinterest o el portal del New York Ti
 
 Lo que verás a continuación son mis apuntes sobre el [curso](https://platzi.com/cursos/django-avanzado/) 🚀 Si ves algún error o punto de mejora no dudes en hacer tu aporte 💚
 
+Este curso es la continuación del [curso intermedio de Django]()
+
 ## Cimientos
 
 ### Arquitectura de una aplicación
