@@ -61,6 +61,9 @@ Todo corriendo en **docker**
 **Celery** Está compuesto de tres servicios: broker beat y flower, una interfaz gráfica a saber lo que pasa en celery
 
 
+### Docker
+
+
 Una vez agregado el código fuente ejecutamos:
 `
 docker-compose -f local.yml build
@@ -74,6 +77,69 @@ docker images
 
 docker-compose -f local.yml up
 ```
+
+Para ejecutar algo en el proyecto se debe ejecutar dentro de docker, por lo que cada comando debe ir acompañado de `docker-compose`
+
+El argumento --rm elimina el contenedor después de ejecutar el comando
+
+
+## Modelos
+
+
+
+Desde los archivos `admin.py` se configura qué se ve en el administrador de archivos de DJango, se debe tener en cuenta que el super usuario se debe crear cada vez que se ejecuta un contenedor ya que la base de datos vive en el contenedor y no en el proyecto.
+
+Los datos se deben importar en el contenedor ya que la base de datos vive en docker.
+
+Las dependencias hacen parte de las imagnes por eso se deben reconstruir cada vez que hayan cambios.
+
+
+
+
+
+## Introducción a Django REST Framework
+
+Una api devuelve respuestas http a solicitudes de cada usuario.
+
+
+
+
+## Real DRF
+
+
+## Tareas Asíncronas
+
+
+
+
+
+## Testing
+
+
+
+
+
+## Django Admin
+
+
+
+
+## Deployment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Helpful tips
