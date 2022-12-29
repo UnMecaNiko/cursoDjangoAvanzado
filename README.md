@@ -65,36 +65,46 @@ Todo corriendo en **docker**
 
 ### Docker
 
+Para evitar estar usando el argumento `-f local.yml` en cada comando `docker-compose` podemos usar el siguiente comando:
+```zsh
+export COMPOSE_FILE=local.yml
+```
+Así, ya podemos ejecutar:
+```zsh
+docker-compose build
+docker-compose up
+docker-compose ps
+docker-compose down
+```
 
-Una vez agregado el código fuente ejecutamos:
-`
+Para construir el contenedor del proyecto con todas sus imagenes ejecutamos:  
+```zsh
 docker-compose -f local.yml build
+```
 
-
-`
-```bash
-docker-compose -f local.yml build
-
-docker images
-
+Para ejecutar el contenedor:
+```zsh
 docker-compose -f local.yml up
-
-
+```
+Si queremos información sobre docker:
+```zsh
 docker-compose ps
 # Nos ayuda a ver las imagenes que corren en docker
+
+docker images
+# Tendremos una lista de las imagenes creadas
 ```
 
 Para ejecutar algo en el proyecto se debe ejecutar dentro de docker, por lo que cada comando debe ir acompañado de `docker-compose`
 
 El argumento --rm elimina el contenedor después de ejecutar el comando
 
-
 Para correr el contenedor de django en otra terminal se debe eliminar y luego correr en una nueva.
 
 Cuado ejecutamos `docker-compose -f local.yml up` debemos revisar con qué nombre esta el contenedor django:
 `docker-compose ps`
 Luego lo eliminamos y lo volvemos a correr
-```
+```zsh
 docker-compose -f local.yml ps
 docker rm -f django
 docker-compose -f local.yml run --rm --service-ports django
@@ -108,11 +118,25 @@ Una de las operaciones más utiles es abrir la shell de django:
 docker-compose run --rm django python manage.py shell_plus
 ```
 
+### Comandos de administración
 
 
-## Modelos
+```
+docker-compose run --rm django COMMAND
 
+docker-compose run --rm django python manage.py createsuperuser
 
+```
+### Más comandos
+
+```zsh
+docker container
+docker images
+docker volume
+docker network
+```
+
+## Modelos  
 
 Desde los archivos `admin.py` se configura qué se ve en el administrador de archivos de DJango, se debe tener en cuenta que el super usuario se debe crear cada vez que se ejecuta un contenedor ya que la base de datos vive en el contenedor y no en el proyecto.
 
@@ -179,8 +203,13 @@ Va encima de una vista y el objeto request se convierte de REST así como el obj
 
 # Helpful tips
 
-Para crear un entorno virtual ejecuta:
-`python3 -m venv .venv` 
+- Para crear un entorno virtual ejecuta:  
+`python3 -m venv .venv`  
+
+- Para evitar estar usando el argumento `-f local.yml` en cada comando `docker-compose` podemos usar el siguiente comando:
+    ```zsh
+    export COMPOSE_FILE=local.yml
+    ```
 
 # Helpful Links
 
