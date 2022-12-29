@@ -103,6 +103,14 @@ Las dependencias hacen parte de las imagnes por eso se deben reconstruir cada ve
 
 Una api devuelve respuestas http a solicitudes de cada usuario.
 
+Decorator [`@api_view`](https://www.django-rest-framework.org/api-guide/views/#api_view)
+
+The core of this functionality is the api_view decorator, which takes a list of HTTP methods that your view should respond to. For example, this is how you would write a very simple view that just manually returns some data
+
+Va encima de una vista y el objeto request se convierte de REST así como el objeto response.
+
+
+
 
 
 
@@ -146,8 +154,8 @@ Una api devuelve respuestas http a solicitudes de cada usuario.
 
 # Helpful tips
 
-
-python3 -m venv 
+Para crear un entorno virtual ejecuta:
+`python3 -m venv .venv` 
 
 # Helpful Links
 
@@ -158,3 +166,5 @@ python3 -m venv
 - [Django documentation](https://docs.djangoproject.com/en/3.2/)
 
 - [The Twelve-Factor App](https://12factor.net/)
+
+- [Django REST framework](https://www.django-rest-framework.org/)
