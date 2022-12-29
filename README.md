@@ -78,11 +78,36 @@ docker-compose -f local.yml build
 docker images
 
 docker-compose -f local.yml up
+
+
+docker-compose ps
+# Nos ayuda a ver las imagenes que corren en docker
 ```
 
 Para ejecutar algo en el proyecto se debe ejecutar dentro de docker, por lo que cada comando debe ir acompañado de `docker-compose`
 
 El argumento --rm elimina el contenedor después de ejecutar el comando
+
+
+Para correr el contenedor de django en otra terminal se debe eliminar y luego correr en una nueva.
+
+Cuado ejecutamos `docker-compose -f local.yml up` debemos revisar con qué nombre esta el contenedor django:
+`docker-compose ps`
+Luego lo eliminamos y lo volvemos a correr
+```
+docker-compose -f local.yml ps
+docker rm -f django
+docker-compose -f local.yml run --rm --service-ports django
+```
+Ahora tendremos una consola donde corre django y otra donde corren los demás servicios
+
+Para hacer operaciones debemos abrir una tercer consola.
+
+Una de las operaciones más utiles es abrir la shell de django:
+```
+docker-compose run --rm django python manage.py shell_plus
+```
+
 
 
 ## Modelos
