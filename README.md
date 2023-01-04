@@ -159,6 +159,17 @@ The core of this functionality is the api_view decorator, which takes a list of 
 Va encima de una vista y el objeto request se convierte de REST así como el objeto response.
 
 
+### Serializers
+
+Los serializers son contenedores que nos permiten tomar tipos de datos complejos, convertirlos en datos nativos de python para después poderlos usar como JSON o XML. Son contenedores que amoldan datos para que cumplan con las condiciones de los serializers y sean llevados a un tipo de estos y después estos puedan ser transformados en otra cosa.
+
+Un buen rendimiento de serializer puede ayudar a evitar la escritura de código innecesario.
+
+Se declaran en `selializers.py` en la carpeta de cada aplicación.
+
+Un serializer se encarga de el trabajo de comunicación de datos en la api por las respuestas http.
+
+
 
 
 
@@ -222,3 +233,7 @@ Va encima de una vista y el objeto request se convierte de REST así como el obj
 - [The Twelve-Factor App](https://12factor.net/)
 
 - [Django REST framework](https://www.django-rest-framework.org/)
+
+- [Serializers](https://platzi.com/clases/1461-django-avanzado/17198-serializers/)
+
+- 
