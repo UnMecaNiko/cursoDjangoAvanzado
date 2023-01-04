@@ -150,6 +150,8 @@ Las dependencias hacen parte de las imagnes por eso se deben reconstruir cada ve
 
 ## Introducción a Django REST Framework
 
+Rest es un tip de arquitectura.
+
 Una api devuelve respuestas http a solicitudes de cada usuario.
 
 Decorator [`@api_view`](https://www.django-rest-framework.org/api-guide/views/#api_view)
@@ -170,8 +172,34 @@ Se declaran en `selializers.py` en la carpeta de cada aplicación.
 Un serializer se encarga de el trabajo de comunicación de datos en la api por las respuestas http.
 
 
+### Buenas prácticas para el diseño de una API REST [Web API Design](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
 
+Uno de los prerequisitos para crear APIs es conocer el protocolo HTTP. Verbos, métodos, estados y las cabeceras.
 
+Van a estar diseñando una interfaz para programadores para que otros programadores puedan interactuar, nos olvidaremos de los templates para que un equipo de Frontend se encargue de eso. Debemos tener la perspectiva de un usuario de API y no la de un diseñador de API.
+
+El objetivo es algo que siempre se deben preguntar qué problema deben de resolverle al usuario final nuestra API. El éxito de nuestra API se mide por qué tan rápido nuestros compañeros pueden usarla.
+
+Es importante usar plurales en vez de singulares.
+
+**REST**: Es una serie de principio de cómo diseñar una web service. Un estilo de arquitectura.
+
+**HTTP** Status Code:
+
+- 201: Creado
+- 304: No modificado
+- 404: No encontrado
+- 401: No autorizado
+- 403: Prohibido o restringido.
+
+Pro tips:
+
+- SSL
+- Caché
+- Valida
+- CSRF o Cross-Site Request Forgery
+- Limita los requests
+- Complementa tu API con un SDK
 
 
 ## Real DRF
@@ -235,5 +263,9 @@ Un serializer se encarga de el trabajo de comunicación de datos en la api por l
 - [Django REST framework](https://www.django-rest-framework.org/)
 
 - [Serializers](https://platzi.com/clases/1461-django-avanzado/17198-serializers/)
+
+- [Web API Design](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+
+- [Buenas prácticas al crear una API](https://platzi.com/clases/1461-django-avanzado/17199-buenas-practicas-para-el-diseno-de-un-api-rest/)
 
 - 
