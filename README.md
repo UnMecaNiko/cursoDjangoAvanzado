@@ -172,7 +172,7 @@ Se declaran en `selializers.py` en la carpeta de cada aplicación.
 Un serializer se encarga de el trabajo de comunicación de datos en la api por las respuestas http.
 
 
-### Buenas prácticas para el diseño de una API REST [Web API Design](https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf)
+### Buenas prácticas para el diseño de una API REST
 
 Uno de los prerequisitos para crear APIs es conocer el protocolo HTTP. Verbos, métodos, estados y las cabeceras.
 
@@ -200,6 +200,18 @@ Pro tips:
 - CSRF o Cross-Site Request Forgery
 - Limita los requests
 - Complementa tu API con un SDK
+
+
+### Request, response, renderers y parsers
+
+**Parsers:** Tipo de formato para las respuestas o solicitudes
+
+**Renderers**: La forma en la que se visualizan los datos.
+
+Es una ayuda importante al momento de consultar la API a través del navegador, ya que se pueden configurar distintas formas de representación de datos o ingreso de los mismos. Incluso podemos visualizar formatos como Latex o PNG.
+
+
+
 
 
 ## Real DRF
