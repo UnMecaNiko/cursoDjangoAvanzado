@@ -210,11 +210,21 @@ Pro tips:
 
 Es una ayuda importante al momento de consultar la API a través del navegador, ya que se pueden configurar distintas formas de representación de datos o ingreso de los mismos. Incluso podemos visualizar formatos como Latex o PNG.
 
-
-
-
-
 ## Real DRF
+
+### Autenticación y tipos de autenticación
+
+La autenticación es la parte de asociar una petición a un usuario y después al objeto request se le asigna dos propiedades como request.user y request.auth
+
+
+
+
+
+- **O Auth** (short for "Open Authorization") is an open standard for access delegation, commonly used as a way for internet users to grant websites or applications access to their information on other websites but without giving them the passwords.This mechanism is used by companies such as Amazon, Google, Facebook, Microsoft, and Twitter to permit the users to share information about their accounts with third-party applications or websites.
+
+
+- **Json Web Tokens** 
+
 
 
 ## Tareas Asíncronas
@@ -267,7 +277,7 @@ Es una ayuda importante al momento de consultar la API a través del navegador, 
 - [.gitignore](https://www.toptal.com/developers/gitignore)
 
 - [Basic writing and formatting syntax](https://docs.github.com/es/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-
+  - ----
 - [Django documentation](https://docs.djangoproject.com/en/3.2/)
 
 - [The Twelve-Factor App](https://12factor.net/)
@@ -280,4 +290,6 @@ Es una ayuda importante al momento de consultar la API a través del navegador, 
 
 - [Buenas prácticas al crear una API](https://platzi.com/clases/1461-django-avanzado/17199-buenas-practicas-para-el-diseno-de-un-api-rest/)
 
-- 
+- [Authentication](https://www.django-rest-framework.org/api-guide/authentication/)
+
+- [Permissions](https://www.django-rest-framework.org/api-guide/permissions/)
