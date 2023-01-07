@@ -172,6 +172,8 @@ Se declaran en `selializers.py` en la carpeta de cada aplicación.
 Un serializer se encarga de el trabajo de comunicación de datos en la api por las respuestas http.
 
 
+
+
 ### Buenas prácticas para el diseño de una API REST
 
 Uno de los prerequisitos para crear APIs es conocer el protocolo HTTP. Verbos, métodos, estados y las cabeceras.
@@ -233,6 +235,11 @@ La autenticación es la parte de asociar una petición a un usuario y después a
 
 
 ### Creando token de autorización
+
+
+
+
+
 
 
 
